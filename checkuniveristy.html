@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="/main/css/main.css" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/main/javascript/main.js"></script>
+  <script src="/main/javascript/calculator.js"></script>
+  <title>CheckUniversity</title>
+</head>
+
+<body>
+        <!-- NavBar -->
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/main/html/index.html">
+            <img src="/main/img/graduation-owl 32.png" alt="Logo sowy" class="mr-2" />
+            eLibrary
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" onclick="toggleMenu()">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/main/html/index.html">Strona główna</a>
+              </li>
+              <li class="nav-item">
+                <button class="nav-link active" data-bs-toggle="modal" data-bs-target="#contactModal" onclick="closeMenu()">Kontakt</button>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active Partners" aria-current="page" href="/main/html/booksclub.html">Klub książki</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active Partners" aria-current="page" href="/main/html/recomendBooks.html">Rekomendowane książki</a>
+              </li>
+            </ul>
+            <a class="btn btn-outline-success loginPage" href="/main/html/loginPanel.html">Zaloguj</a>
+        </div>
+        </div>
+      </nav>
+      
+        <!-- Contact popup -->
+        <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="contactModalLabel">Formularz kontaktowy</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <form id="contactForm">
+                  <div class="mb-3">
+                    <label for="name" class="form-label">Imię</label>
+                    <input type="text" class="form-control" id="name">
+                  </div>
+                  <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email">
+                  </div>
+                  <div class="mb-3">
+                    <label for="message" class="form-label">Wiadomość</label>
+                    <textarea class="form-control" id="message" rows="4"></textarea>
+                  </div>
+                  <button type="button" class="btn btn-primary" onclick="sendMessage()">Wyślij</button>
+                </form>
+                <div id="successMessage" style="display: none;">Wiadomość została wysłana</div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Zamknij</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+  <!-- description and photo -->
+  <div class="container mt-3">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="section-left">
+          <h2>Co zyskujesz będąc studentem Uczelni Partnerskich?</h2>
+          <ul>
+            <li>Brak kaucji przy wypożyczeniu (normalnie wynosi kaucja 20zł)</li>
+            <li>Jako pierwsi w Polsce oferujemy możliwość wypożyczenia tabletu Kindle przez studentów Uczelni Partnerskich</li>
+            <li>Wypożyczenie tabletu Kindle <strong>za 0zł!</strong></li>
+            <li>Dłuższy okres możliwości wypożyczenia bez przedłużenia (Do 6msc od daty wypożycznia)</li>
+            <li>Darmowe ebooki (lubimy sprawiać prezenty :) )</li>
+            <li>Rabaty na eventy książkowe</li>
+            <li>Możliwość dołączenia do naszego klubu książki jest dostępne niezależnie od tego czy twoja uczelnia jest Partnerem :)</li>
+            <li>Spotkania z autorami <br></li>
+            <p>Gościliśmy już Krystynę Siesicką, Adama Bahdaja, Katarzynę Ryryche czy Dawida Piątkowskiego </p>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="section-right">
+          <img src="/main/img/obecni w projekcie.jpg" alt="Zdjęcie" class="img-fluid">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="cost">Użyj naszego kalkulatora aby sprawdzić cenę</h2>
+
+  <!--calculator-->
+  <div class="calculator">
+    <h2>Kalkulator</h2>
+    <form id="calcForm">
+      <div class="form-group">
+        <label for="student">Czy jesteś studentem uczelni Partnerskiej?</label>
+        <select id="student" name="student">
+          <option value="yes">Tak</option>
+          <option value="no">Nie</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="kindle">Czy chcesz wypożyczyć Kindle?</label>
+        <select id="kindle" name="kindle">
+          <option value="yes">Tak</option>
+          <option value="no">Nie</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="books">Ile książek chcesz wypożyczyć?</label>
+        <select id="books" name="books">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="duration">Czas wypożyczenia</label>
+        <select id="duration" name="duration">
+          <option value="2 weeks">Do 2 tygodni</option>
+          <option value="1 month">Do 1 miesiąca</option>
+          <option value="2 months">Do 2 miesięcy</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <button class="calculate" type="submit">Oblicz</button>
+      </div>
+    </form>
+    <div class="form-group">
+      <h3 id="totalPrice"></h3>
+    </div>
+  </div>
+
+  <!-- go to the top of page-->
+
+  <button class="btn btn-primary gotop" onclick="scrollToTop()">Przewiń do góry</button>
+
+  <!-- Footer -->
+<footer class="text-center text-lg-start">
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+      © 2023 eLibrary:
+      <a class="text-dark" href="https://github.com/Viktor1502/WebLibrary">Wiktor Smolaga</a>
+    </div>
+  </footer>
+  
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="/main/css/main.css" />
+  <link rel="stylesheet" href="/main/css/recomendbooks.css" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/main/javascript/main.js"></script>
+  <title>eLibrary</title>
+</head>
+
+<body>
+  <!-- NavBar -->
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/main/html/index.html">
+      <img src="/main/img/graduation-owl 32.png" alt="Logo sowy" class="mr-2" />
+      eLibrary
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" onclick="toggleMenu()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+            <a class="nav-link active MainPageB" aria-current="page" href="/main/html/index.html">Strona główna</a>
+          </li>
+        <li class="nav-item">
+          <button class="nav-link active ContactBt" data-bs-toggle="modal" data-bs-target="#contactModal" onclick="closeMenu()">Kontakt</button>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active Partners" aria-current="page" href="/main/html/checkuniveristy.html">Partnerzy</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active Partners" aria-current="page" href="/main/html/booksclub.html">Klub książki</a>
+        </li>
+      </ul>
+      <a class="btn btn-outline-success loginPage" href="/main/html/loginPanel.html">Zaloguj</a>
+    </div>
+  </div>
+</nav>
+
+  <!-- Contact popup -->
+  <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="contactModalLabel">Formularz kontaktowy</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="contactForm">
+            <div class="mb-3">
+              <label for="name" class="form-label">Imię</label>
+              <input type="text" class="form-control" id="name">
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email">
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Wiadomość</label>
+              <textarea class="form-control" id="message" rows="4"></textarea>
+            </div>
+            <button type="button" class="btn btn-primary" onclick="sendMessage()">Wyślij</button>
+          </form>
+          <div id="successMessage" style="display: none;">Wiadomość została wysłana</div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Zamknij</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+    <!--booksShelf-->
+    <h1>Polecane książki</h1>
+        <h3>Jeśli chcesz zarezerwować książkę zaloguj się na stronie</h3>
+  <div class="book-container">
+    <img src="/main/img/logoBooks/11-papierowych-serc-b-iext130802075.webp" alt="Książka 1">
+    <img src="/main/img/logoBooks/all-of-your-flaws-przypomnij-mi-nasza-przeszlosc-b-iext131168803.webp" alt="Książka 1">
+    <img src="/main/img/logoBooks/zanim-wystygnie-kawa-b-iext130905159.webp" alt="Książka 1">
+    <img src="/main/img/logoBooks/atomowe-nawyki-drobne-zmiany-niezwykle-efekty-b-iext123152117.webp" alt="Książka 1">
+    <img src="/main/img/logoBooks/ciesze-sie-ze-moja-mama-umarla-b-iext126853657.webp" alt="Książka 1">
+    <img src="/main/img/logoBooks/co-wyszeptal-nam-deszcz-b-iext131173065.webp" alt="Książka 1">
+    <img src="/main/img/logoBooks/despite-your-im-perfections-dotrzymaj-zlozonej-mi-obietnicy-b-iext131173431.webp" alt="Książka 1">
+    <img src="/main/img/logoBooks/dziedzictwo-hawthorne-ow-the-inheritance-games-tom-2-b-iext128390107.webp" alt="Książka 1">
+    <img src="/main/img/logoBooks/flaw-less-opowiedz-mi-nasza-historie-b-iext131173149.webp" alt="Książka 1">
+    <img src="/main/img/logoBooks/for-sure-not-you-westwood-academy-tom-1-b-iext131172807.webp" alt="Książka 1">
+    <img src="/main/img/logoBooks/kabalista-b-iext126663409.webp" alt="Książka 1">
+    <img src="/main/img/logoBooks/krolewna-rodzina-monet-tom-2-czesc-1-b-iext131173178.webp" alt="Książka 1">
+    <img src="/main/img/logoBooks/krolewna-rodzina-monet-tom-2-czesc-2-b-iext131174690.webp" alt="Książka 1">
+    <img src="/main/img/logoBooks/maybe-you-westwood-academy-tom-2-b-iext131169487.webp" alt="Książka 1">
+    <img src="/main/img/logoBooks/perelka-rodzina-monet-tom-3-czesc-1-b-iext131169578.webp" alt="Książka 1">
+    <img src="/main/img/logoBooks/perelka-rodzina-monet-tom-3-czesc-2-b-iext131168752.webp" alt="Książka 1">
+    <img src="/main/img/logoBooks/przedza-w-poszukiwaniu-wewnetrznej-wolnosci-b-iext127636503.webp" alt="Książka 1">
+    <img src="/main/img/logoBooks/skarb-rodzina-monet-tom-1-b-iext130346616.webp" alt="Książka 1">
+    <img src="/main/img/logoBooks/ten-drugi-b-iext126897900.webp" alt="Książka 1">
+    <img src="/main/img/logoBooks/the-inheritance-games-tom-1-b-iext128392266.webp" alt="Książka 1">
+    <img src="/main/img/logoBooks/uwieziona-b-iext127988535.webp" alt="Książka 1">
+    
+  </div>
+
+    <!-- go to the top of page-->
+
+    <button class="btn btn-primary" onclick="scrollToTop()">Przewiń do góry</button>
+
+
+    <!-- Footer -->
+    <footer class="bg-light text-center text-lg-start">
+      <div
+        class="text-center p-3"
+        style="background-color: rgba(0, 0, 0, 0.2)"
+      >
+        © 2023 eLibrary:
+        <a class="text-dark" href="https://github.com/Viktor1502/WebLibrary"
+          >Wiktor Smolaga</a
+        >
+      </div>
+    </footer>
+    <!-- End of Footer -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+  </body>
+</html>

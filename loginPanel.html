@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="/main/css/logininPanel.css" />
+  <script src="/main/javascript/main.js"></script>
+  <script src="/main/javascript/login.js"></script>
+
+  <title>eLibrary</title>
+</head>
+
+<body>
+  <!-- NavBar -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/main/html/index.html">
+        <img src="/main/img/graduation-owl 32.png" alt="Logo sowy" class="mr-2" />
+        eLibrary
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" onclick="toggleMenu()">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active MainPageB" aria-current="page" href="/main/html/index.html">Strona główna</a>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link active ContactBt" data-bs-toggle="modal" data-bs-target="#contactModal">Kontakt</button>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active Partners" aria-current="page" href="/main/html/recomendBooks.html">Rekomendowane książki</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active Partners" aria-current="page"
+              href="/main/html/checkuniveristy.html">Partnerzy</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="image-container">
+          <img src="/main/img/boyRead.jpg" alt="Zdjęcie chłopaka który czyta książkę w bibliotece" class="login-image" />
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="login-container">
+          <h2>Logowanie</h2>
+          <form id="loginForm">
+            <div class="form-group">
+              <label for="username">Nazwa użytkownika:</label>
+              <input type="text" id="username" required>
+            </div>
+            <div class="form-group">
+              <label for="password">Hasło:</label>
+              <input type="password" id="password" required>
+            </div>
+            <button type="submit" id="loginButton" onclick="login()">Zaloguj</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-light text-center text-lg-start">
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+      © 2023 eLibrary:
+      <a class="text-dark" href="https://github.com/Viktor1502/WebLibrary">Wiktor Smolaga</a>
+    </div>
+  </footer>
+  <!-- End of Footer -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

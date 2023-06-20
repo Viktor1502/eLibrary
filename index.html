@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="/main/css/main.css" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/main/javascript/main.js"></script>
+  <title>eLibrary</title>
+</head>
+
+<body>
+  <!-- NavBar -->
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/main/html/index.html">
+      <img src="/main/img/graduation-owl 32.png" alt="Logo sowy" class="mr-2" />
+      eLibrary
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" onclick="closeMenu()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <button class="nav-link active ContactBt" data-bs-toggle="modal" data-bs-target="#contactModal" onclick="closeMenu()">Kontakt</button>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active Partners" aria-current="page" href="/main/html/checkuniveristy.html">Partnerzy</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active Partners" aria-current="page" href="/main/html/booksclub.html">Klub książki</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active Partners" aria-current="page" href="/main/html/recomendBooks.html">Rekomendowane książki</a>
+        </li>
+      </ul>
+      <a class="btn btn-outline-success loginPage" href="/main/html/loginPanel.html">Zaloguj</a>
+    </div>
+  </div>
+</nav>
+
+  <!-- Contact popup -->
+  <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="contactModalLabel">Formularz kontaktowy</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="contactForm">
+            <div class="mb-3">
+              <label for="name" class="form-label">Imię</label>
+              <input type="text" class="form-control" id="name">
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email">
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Wiadomość</label>
+              <textarea class="form-control" id="message" rows="4"></textarea>
+            </div>
+            <button type="button" class="btn btn-primary" onclick="sendMessage()">Wyślij</button>
+          </form>
+          <div id="successMessage" style="display: none;">Wiadomość została wysłana</div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Zamknij</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+    <!-- Carousel -->
+    <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+    
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="8000">
+          <img class="carousel-image" src="/main/img/Masz jakieś pytaniamobile.png" alt="Obrazek dla mobile">
+          <img src="/main/img/zostan_jednym_znas 3.0.png" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item" data-bs-interval="8000">
+          <img class="carousel-image" src="/main/img/To polecają nasi czytelnicy mobile.png" alt="Obrazek dla mobile">
+          <img src="/main/img/Ucz się na błędach innych.png" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item" data-bs-interval="8000">
+          <img class="carousel-image" src="/main/img/Lubisz czytać książki mobile2.png" alt="Obrazek dla mobile">
+          <img src="/main/img/Masz jakieś pytania 2.0.png" class="d-block w-100" alt="...">
+        </div>
+      </div>
+    
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+<!-- End of Carousel -->
+
+
+    <!-- Available options -->
+    <div class="container">
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">
+            Jesteś studentem? Sprawdź czy twoja uczelnia jest naszym Partnerem!
+          </h2>
+          <h3 class="lead">Co daje Partnerstwo twojej uczelni?</h3>
+          <ol>
+            <li>Brak jakiejkolwiek kaucji za wypożyczone książki</li>
+            <li>
+              Pierwsi w Polsce oferujemy studentom naszych Partnerów wynajem
+              tabletów Kindle!
+            </li>
+            <li>Zwiększony limit wynajętych książek</li>
+            <li>Dłuższy okres możliwości wypożyczenia bez przedłużenia</li>
+          </ol>
+          <div class="text-center pt-5">
+            <a href="/main/html/checkuniveristy.html" class="btn btn-primary btn-lg"
+              >Przejdź do sprawdzania uczelni</a
+            >
+          </div>
+        </div>
+        <div class="col-md-5">
+          <img
+            src="../img/kindle.jpg"
+            class="img-fluid img-thumbnail"
+            alt="Zdjęcie chłopaka czytającego na tablecie Kindle"
+          />
+        </div>
+      </div>
+      <hr class="featurette-divider" />
+      <div class="row featurette">
+        <div class="col-md-7 order-md-2">
+          <h2 class="featurette-heading">
+            Jesteśmy fanami książek! Ty też?
+          </h2>
+          <p class="lead">
+            Uwielbiamy książki, ale fajnie jest z kimś wymienić się
+            spostrzeniami na dane tematy. Fantastyka, biografie a może
+            kryminały? Na pewno znajdziesz coś dla siebie a przede wszystkim
+            kogoś z kimś bedziesz mogła/ mógł wymienić zdanie na temat danej
+            książki!
+          </p>
+          <div class="text-center pt-5">
+            <a href="/main/html/booksclub.html" class="btn btn-primary btn-lg"
+              >Sprawdź co jeszcze oferuje nasz klub!</a
+            >
+          </div>
+        </div>
+        <div class="col-md-5">
+          <img
+            src="../img/club.jpg"
+            class="img-fluid img-thumbnail"
+            alt="Zjęcie ze spotkania klubu książki"
+          />
+        </div>
+      </div>
+      <hr class="featurette-divider" />
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">Twoja uczelnia nie jest jeszcze naszym Partnerem?</h2>
+          <h3 class="lead">
+            Wypełnij formularz zgłoszeniowy a my odezwiemy się z ofertą!
+          </h3>
+          <p>Twoja uczelnia jeszcze nie jest naszym Partnerem? To idealny moment, aby nas o tym poinformować! Wypełnij formularz zgłoszeniowy, który pomoże nam nawiązać z nią kontakt.</p>
+            <p>Jako Partner eLibrary, Twoja uczelnia będzie miała dostęp do niezliczonych korzyści. Zapewniamy nie tylko wspaniałe możliwości literackie, ale także wyjątkowe eventy i przywileje dla studentów.</p>
+            <div class="text-center pt-5">
+              <a href="mailto:support@eLibrary.com" class="btn btn-primary btn-lg">Przejdź do formularza</a>
+            </div>
+            
+        </div>
+        <div class="col-md-5">
+          <img
+            src="/main/img/univeristy.jpg"
+            class="img-fluid img-thumbnail"
+            alt="ciesząca się kobieta z książką"
+          />
+        </div>
+      </div>
+    </div>
+    <!-- End of Available options -->
+
+
+    <!-- go to the top of page-->
+
+    <button class="btn btn-primary" onclick="scrollToTop()">Przewiń do góry</button>
+
+
+    <!-- Footer -->
+    <footer class="bg-light text-center text-lg-start">
+      <div
+        class="text-center p-3"
+        style="background-color: rgba(0, 0, 0, 0.2)"
+      >
+        © 2023 eLibrary:
+        <a class="text-dark" href="https://github.com/Viktor1502/WebLibrary"
+          >Wiktor Smolaga</a
+        >
+      </div>
+    </footer>
+    <!-- End of Footer -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+  </body>
+</html>
